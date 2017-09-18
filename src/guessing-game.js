@@ -1,26 +1,26 @@
 class GuessingGame {
     constructor() {
-      var arr = [];
+      this.min = 0;
+      this.max = 0;
+      this.number = 0;
     }
 
     setRange(min, max) {
-      for (var i = min; i <= max; i++) {
-        arr.push(i);
-      }
+      this.min = min;
+      this.max = max;
     }
 
     guess() {
-      var j = Math.floor(arr.length / 2);
-      return arr[j];
+      this.number = Math.floor((this.min + (this.max - this.min)) / 2);
+      return this.number;
     }
 
     lower() {
-      arr.length = j;
+      this.max = this.number - 1;
     }
 
     greater() {
-      var arrG = arr;
-      arr = arrG.slice(j+1);
+        this.min = this.number + 1;
     }
 }
 

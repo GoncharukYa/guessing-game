@@ -1,8 +1,9 @@
 class GuessingGame {
-    constructor() {}
+    constructor() {
+      var arr = [];
+    }
 
     setRange(min, max) {
-      var arr = [];
       for (var i = min; i <= max; i++) {
         arr.push(i);
       }
